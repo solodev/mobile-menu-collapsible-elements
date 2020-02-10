@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Collapsible elements in mobile menu</title>
+  </head>
+  <body>
+    <body>
+      <div class="header navigation">
+        <div class="col-xl-3 col-lg-2 col-sm-4 col-5">
+          <a href="/">
+            <img alt="Logo" class="img-fluid py-3 logo" src="https://raw.githubusercontent.com/solodev/mobile-menu-collapsible-elements/master/images/lunarxp-logo-white.png" aria-role="logo">
+          </a>
+        </div>
+      </div>
+      <div id="overlay" class="overlay hidden" role="navigation">
+        <div class="wrap box-wrap">
+          <div class="mobileNav black;">
+            <div class="box-close box-toggle open2">
+              <a href="#" class="toggle-mobile" aria-label="Menu Toggle">×</a>
+            </div>
+            <div class="box-mobile-menu mobile-menu">
+              <div class="mobile-menu">
+                <div class="mobile-tab position-relative mb-4">
+                  <h3 class="h4 tab">Trip Tools</h3>
+                  <ul class="pl-4 my-4 nolist">
+                    <li><a href="#" aria-label="Trip Apps Link">Trip Apps</a></li>
+                    <li><a href="#" aria-label="Trip Planner Link">Trip Planner</a></li>
+                    <li><a href="#" aria-label="Space Excursions">Space Excursions</a></li>
+                  </ul>
+                </div> 
+                <h3 class="h4 mb-4"><a href="#" aria-label="Buy SpeceJet Tickets">Buy SpeceJet Tickets</a></h3>
+                <div class="mobile-tab position-relative mb-4">
+                  <h3 class="h4 tab">Maps &amp; Schedules</h3>
+                  <ul class="pl-4 my-4 nolist">
+                    <li><a href="#" aria-label="Routes & Schedules Link">Routes &amp; Schedules</a></li>
+                    <li><a href="#" aria-label="Map Gallery Link">Map Gallery</a></li>
+                    <li><a href="#" aria-label="Popular Destinations Link">Popular Destinations</a></li>
+                    <li><a href="#" aria-label="Interactive Maps Link">Interactive Maps</a></li>
+                  </ul>
+                </div>
+                <h3 class="h4 mb-4"><a href="#" aria-label="Contact Link">Contact</a></h3>
+              </div>
+              <hr>
+            </div>
+            <!--.mobile-menu-->
+          </div>
+        </div>
+      </div>
+   <script>
+    $('.toggle-mobile').click(function() {
+    $('.overlay').toggleClass('hidden');
+    });
+
+    $('.mobile-tab').on('click', 'h3', function(e) {
+    $(this).toggleClass('active');
+    $(this).parent().find('ul').toggleClass('open');
+    e.preventDefault();
+    });
+   </script>
+    
+  </body>
+</html>
+
